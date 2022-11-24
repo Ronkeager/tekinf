@@ -1,0 +1,47 @@
+/* UPPGIFT 2
+
+
+#include <string>
+#include <array>
+#include <iostream>
+
+using namespace std;
+
+std::string namn[15] = { "Marcel", "Anton", "Emil", "Ronan", "Dante", "Mete", "Ivan", "Oskar", "Leon", "Bictooooor", "Nico", "Rafal", "Charlotte", "Fredrik", "Alvin" };
+int i;
+
+int main() {
+	while (i < 15) {
+		std::cout << namn[i] << "\n";
+		i++; i++;
+	}
+	return 0;
+}
+
+
+UPPGIFT 3
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string snabbmat[4] = { "KFC", "Donken", "Burger King", "Pinchos" };
+
+int main() {
+	string mat_first;
+	string mat_last;
+
+	std::cout << "Vad vill du ändra " << snabbmat[0] << " till?\n";
+	std::cin >> mat_first;
+	snabbmat[0] = mat_first;
+	std::cout << "Vad vill du ändra " << snabbmat[3] << " till?\n";
+	std::cin >> mat_last;
+	snabbmat[3] = mat_last;
+
+	std::cout << "Ok, nu ser din lista ut såhär:\n";
+
+	for (int i = 0; i < 4; i++) {
+		std::cout << snabbmat[i] << "\n";
+	}
+}
