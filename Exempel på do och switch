@@ -1,0 +1,66 @@
+DO:
+
+int i = 3;
+	int j = 1;
+	bool check_first_time = true;
+	bool cont = false;
+	string userinput;
+
+	do {
+		
+		std::cout << "3 * " << j << " = " << i * j << endl;
+		
+		if (check_first_time == true) {
+			std::cout << "Vill du veta resten av ggrtabellen upp till tio?\n";
+			std::cin >> userinput;
+
+			if (userinput == "Nej" || userinput == "nej") {
+				std::cout << "Ok, vi ses..";
+				cont = true;
+			} else if (userinput == "Ja" || userinput == "ja") {
+				check_first_time = false;
+			} else {
+				std::cout << "Jag tar det som ett ja :D\n";
+				check_first_time = false;
+			}
+		}
+
+		j++;
+
+	} while (cont == false && j < 11);
+  
+  SWITCH:
+  
+  #include <string>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	int userinput;
+	bool loop = true;
+
+	while (loop == true) {
+		std::cout << "Det finns tre dörrar med olika saker bakom dem, vilken väljer du? (1, 2, 3)\n";
+		std::cin >> userinput;
+
+		switch (userinput) {
+			case 1:
+				std::cout << "Bakom dörren fanns det en hund! Din nya vän för livet!\n";
+				loop = false;
+				break;
+			case 2: 
+				std::cout << "Bakom dörren fanns det en sportbil! Grattis!\n";
+				loop = false;
+				break;
+			case 3:
+				std::cout << "Bakom dörren fanns det en enkrona... Aja...\n";
+				loop = false;
+				break;
+			default:
+				std::cout << "Det var inte en dörr!\n";
+		}
+	}
+
+}
